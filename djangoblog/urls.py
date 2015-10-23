@@ -18,4 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+     r'^blog/category/(?P<slug>[^\.]+).html', 
+    'djangorocks.blog.views.view_category', 
+    name='view_blog_category'),
 ]
